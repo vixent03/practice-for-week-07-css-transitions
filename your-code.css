@@ -1,35 +1,50 @@
-/* ===== Problem 1 ===== */
-
-.rocket_svg {
-    height: 200px;
-    width: auto;
-    margin-left: 300px;
-    /* Your code here */
-}
-
-/* Create rocket hover animation here
-
-
-/* ===== Problem 2 ===== */
-
-.astronaut_svg {
-    height: 200px;
-    width: auto;
-    margin-left: 200px;
-    /* Your code here */
-}
-
-/* Create astronaut hover animation here
-
-/* ======= BONUS ======= */
-
-.earth_svg {
-    height: 200px;
-    width: auto;
-    margin-left: 300px;
-    /* Your animation here
-}
-
-@keyframes spin {
-    /* Set up your keyframe animation here
-}
+                    /* ===== Problem 1 ===== */
+                    
+                    .rocket_svg {
+                        height: 200px;
+                        width: auto;
+                        margin-left: 300px;
+                        transition-property: transform;
+                        transition-delay: 2s;
+                        transform: .5;
+                        /* Your code here */
+                        transition: 2s;
+                    }
+                    
+                    .rocket_svg:hover {
+                        transform: rotate(250deg);
+                    }
+                    /* ===== Problem 2 ===== */
+                    
+                    .astronaut_svg {
+                        height: 200px;
+                        width: auto;
+                        margin-left: 200px;
+                        transition-property: transform;
+                        transition-delay: 2s;
+                        translate: .5;
+                        transition: 2s;
+                        /* Your code here */
+                    }
+                    
+                    .astronaut_svg:hover {
+                        transform: translateX(100px);
+                        transition: 2s;
+                    }
+                    /* ======= BONUS ======= */
+                    
+                    .earth_svg {
+                        height: 200px;
+                        width: auto;
+                        margin-left: 300px;
+                        animation: spin infinite linear 2s;
+                    }
+                    
+                    @keyframes spin {
+                        0% {
+                            transform: rotate(0);
+                        }
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
